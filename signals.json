@@ -1,72 +1,72 @@
 [
   {
+    "symbol": "SIUSDT",
+    "side": "LONG",
+    "score": 26539.03,
+    "sources": "CoinGecko",
+    "entry": 0.028308,
+    "sl": 0.015699,
+    "tp1": 0.047222,
+    "tp2": 0.059832
+  },
+  {
     "symbol": "PORTALUSDT",
     "side": "LONG",
-    "score": 189.64,
+    "score": 370.6,
     "sources": "KuCoin-Perp+CoinGecko",
-    "entry": 0.02118,
-    "sl": 0.01865,
-    "tp1": 0.024975,
-    "tp2": 0.027505
-  },
-  {
-    "symbol": "BULLAUSDT",
-    "side": "LONG",
-    "score": 163.84,
-    "sources": "CoinGecko",
-    "entry": 0.064144,
-    "sl": 0.051265,
-    "tp1": 0.083462,
-    "tp2": 0.096341
-  },
-  {
-    "symbol": "AKEUSDT",
-    "side": "SHORT",
-    "score": 149.45,
-    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.001103,
-    "sl": 0.001298,
-    "tp1": 0.00081,
-    "tp2": 0.000614
+    "entry": 0.03848,
+    "sl": 0.03062,
+    "tp1": 0.05027,
+    "tp2": 0.05813
   },
   {
     "symbol": "EVAAUSDT",
     "side": "SHORT",
-    "score": 145.08,
+    "score": 220.43,
     "sources": "KuCoin-Perp+CoinGecko",
-    "entry": 2.0762,
-    "sl": 2.403271,
-    "tp1": 1.585594,
-    "tp2": 1.258523
+    "entry": 1.3532,
+    "sl": 1.702346,
+    "tp1": 0.829481,
+    "tp2": 0.480335
   },
   {
-    "symbol": "MMTUSDT",
+    "symbol": "AKEUSDT",
     "side": "SHORT",
-    "score": 106.64,
+    "score": 164.89,
     "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.1722,
-    "sl": 0.190926,
-    "tp1": 0.144111,
-    "tp2": 0.125385
+    "entry": 0.00106,
+    "sl": 0.001251,
+    "tp1": 0.000774,
+    "tp2": 0.000584
   },
   {
-    "symbol": "KNTQUSDT",
-    "side": "LONG",
-    "score": 97.59,
-    "sources": "CoinGecko",
-    "entry": 0.209187,
-    "sl": 0.191189,
-    "tp1": 0.236185,
-    "tp2": 0.254183
+    "symbol": "BLURUSDT",
+    "side": "SHORT",
+    "score": 160.6,
+    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
+    "entry": 0.00674,
+    "sl": 0.007947,
+    "tp1": 0.004929,
+    "tp2": 0.003722
   },
   {
     "symbol": "INITUSDT",
     "side": "SHORT",
-    "score": 87.57,
+    "score": 154.38,
     "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.10847,
-    "sl": 0.118749,
-    "tp1": 0.093051,
-    "tp2": 0.082772
+    "entry": 0.08897,
+    "sl": 0.103939,
+    "tp1": 0.066517,
+    "tp2": 0.051548
+  },
+  {
+    "symbol": "THEUSDT",
+    "side": "LONG",
+    "score": 150.09,
+    "sources": "KuCoin-Perp+CoinGecko",
+    "entry": 0.03375,
+    "sl": 0.029496,
+    "tp1": 0.040131,
+    "tp2": 0.044384
   }
 ]
