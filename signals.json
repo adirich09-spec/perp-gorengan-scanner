@@ -1,20 +1,47 @@
 [
   {
-    "symbol": "XYZUSDT",
-    "side": "LONG",
-    "score": 28.4,
-    "entry": 1.0,
-    "sl": 0.97,
-    "tp1": 1.045,
-    "tp2": 1.075
+    "symbol": "MMTUSDT",
+    "side": "SHORT",
+    "score": 180.44,
+    "entry": 0.191809,
+    "sl": 0.225747,
+    "tp1": 0.140902,
+    "tp2": 0.106964
   },
   {
-    "symbol": "ABCUSDT",
+    "symbol": "INITUSDT",
+    "side": "LONG",
+    "score": 163.94,
+    "entry": 0.137969,
+    "sl": 0.121373,
+    "tp1": 0.162863,
+    "tp2": 0.179459
+  },
+  {
+    "symbol": "KNTQUSDT",
+    "side": "LONG",
+    "score": 108.81,
+    "entry": 0.21807,
+    "sl": 0.200807,
+    "tp1": 0.243965,
+    "tp2": 0.261228
+  },
+  {
+    "symbol": "LISTAUSDT",
     "side": "SHORT",
-    "score": 24.1,
-    "entry": 2.0,
-    "sl": 2.05,
-    "tp1": 1.925,
-    "tp2": 1.875
+    "score": 92.39,
+    "entry": 0.081578,
+    "sl": 0.088816,
+    "tp1": 0.070721,
+    "tp2": 0.063483
+  },
+  {
+    "symbol": "TFUELUSDT",
+    "side": "LONG",
+    "score": 90.26,
+    "entry": 0.007153,
+    "sl": 0.006387,
+    "tp1": 0.008303,
+    "tp2": 0.00907
   }
 ]
