@@ -4,20 +4,25 @@ import requests
 import pandas as pd
 
 BASE_URL = "https://fapi.binance.com"
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
 def get_klines(symbol: str, interval: str = "15m", limit: int = 100) -> pd.DataFrame:
     r = requests.get(
         f"{BASE_URL}/fapi/v1/klines",
         params={"symbol": symbol, "interval": interval, "limit": limit},
+        headers=HEADERS,
         timeout=15,
     )
     r.raise_for_status()
+    data = r.json()
+    if not isinstance(data, list) or len(data) == 0:
+        return pd.DataFrame()
     cols = [
         "open_time", "open", "high", "low", "close", "volume",
         "close_time", "qv", "trades", "tb_base", "tb_quote", "ignore"
     ]
-    df = pd.DataFrame(r.json(), columns=cols)
+    df = pd.DataFrame(data, columns=cols)
     for c in ["open", "high", "low", "close", "volume"]:
         df[c] = df[c].astype(float)
     return df
@@ -34,7 +39,7 @@ def compute_atr(df: pd.DataFrame, period: int = 14) -> float:
 
 def analyze_symbol(symbol: str, quote_vol: float, price_chg_pct: float):
     df = get_klines(symbol, interval="15m", limit=90)
-    if len(df) < 55:
+    if df.empty or len(df) < 55:
         return None
 
     close_series = df["close"]
@@ -50,7 +55,6 @@ def analyze_symbol(symbol: str, quote_vol: float, price_chg_pct: float):
     vol_avg = float(df["volume"].iloc[-21:-1].mean())
     vol_ratio = float(df["volume"].iloc[-1]) / (vol_avg + 1e-9)
 
-    # Filter aset "gorengan": likuiditas cukup, volatilitas tinggi, lonjakan volume
     if not (5_000_000 <= quote_vol <= 250_000_000):
         return None
     if atr_pct < 1.5 or vol_ratio < 1.6:
@@ -66,7 +70,6 @@ def analyze_symbol(symbol: str, quote_vol: float, price_chg_pct: float):
     tp1 = 0.0
     tp2 = 0.0
 
-    # Skenario LONG: tren naik (EMA20 > EMA50 & harga di atas EMA50) dan dekat area support lokal
     if ema20 > ema50 and last_close >= ema50:
         dist_support_pct = ((last_close - recent_low) / last_close) * 100.0
         if dist_support_pct <= 4.0:
@@ -79,7 +82,6 @@ def analyze_symbol(symbol: str, quote_vol: float, price_chg_pct: float):
             tp1 = entry + (1.5 * risk)
             tp2 = entry + (2.5 * risk)
 
-    # Skenario SHORT: tren turun (EMA20 < EMA50 & harga di bawah EMA50) dan dekat area resistance lokal
     elif ema20 < ema50 and last_close <= ema50:
         dist_resist_pct = ((recent_high - last_close) / last_close) * 100.0
         if dist_resist_pct <= 4.0:
@@ -109,15 +111,27 @@ def analyze_symbol(symbol: str, quote_vol: float, price_chg_pct: float):
 
 
 def main():
-    tickers = requests.get(f"{BASE_URL}/fapi/v1/ticker/24hr", timeout=20).json()
-    candidates = []
+    resp = requests.get(f"{BASE_URL}/fapi/v1/ticker/24hr", headers=HEADERS, timeout=20)
+    resp.raise_for_status()
+    tickers = resp.json()
 
+    if not isinstance(tickers, list):
+        print(f"Respons ticker bukan list: {tickers}")
+        return
+
+    candidates = []
     for t in tickers:
-        sym = t.get("symbol", "")
+        if not isinstance(t, dict):
+            continue
+        sym = str(t.get("symbol", ""))
         if not sym.endswith("USDT"):
             continue
-        quote_vol = float(t.get("quoteVolume", 0.0))
-        chg_pct = float(t.get("priceChangePercent", 0.0))
+        try:
+            quote_vol = float(t.get("quoteVolume", 0.0))
+            chg_pct = float(t.get("priceChangePercent", 0.0))
+        except (TypeError, ValueError):
+            continue
+
         if abs(chg_pct) >= 5.0 and quote_vol >= 5_000_000:
             candidates.append((sym, quote_vol, chg_pct))
 
