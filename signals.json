@@ -2,46 +2,71 @@
   {
     "symbol": "MMTUSDT",
     "side": "SHORT",
-    "score": 180.44,
-    "entry": 0.191809,
-    "sl": 0.225747,
-    "tp1": 0.140902,
-    "tp2": 0.106964
+    "score": 180.22,
+    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
+    "entry": 0.18733,
+    "sl": 0.222683,
+    "tp1": 0.1343,
+    "tp2": 0.098947
   },
   {
     "symbol": "INITUSDT",
     "side": "LONG",
-    "score": 163.94,
-    "entry": 0.137969,
-    "sl": 0.121373,
-    "tp1": 0.162863,
-    "tp2": 0.179459
+    "score": 155.93,
+    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
+    "entry": 0.13635,
+    "sl": 0.119902,
+    "tp1": 0.161022,
+    "tp2": 0.17747
   },
   {
     "symbol": "KNTQUSDT",
     "side": "LONG",
-    "score": 108.81,
-    "entry": 0.21807,
-    "sl": 0.200807,
-    "tp1": 0.243965,
-    "tp2": 0.261228
+    "score": 98.26,
+    "sources": "CoinGecko",
+    "entry": 0.21933,
+    "sl": 0.202067,
+    "tp1": 0.245225,
+    "tp2": 0.262488
   },
   {
     "symbol": "LISTAUSDT",
     "side": "SHORT",
-    "score": 92.39,
-    "entry": 0.081578,
-    "sl": 0.088816,
-    "tp1": 0.070721,
-    "tp2": 0.063483
+    "score": 95.73,
+    "sources": "KuCoin-Perp+CoinGecko",
+    "entry": 0.08119,
+    "sl": 0.088942,
+    "tp1": 0.069563,
+    "tp2": 0.061811
+  },
+  {
+    "symbol": "BIGTIMEUSDT",
+    "side": "LONG",
+    "score": 83.77,
+    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
+    "entry": 0.007081,
+    "sl": 0.006536,
+    "tp1": 0.007898,
+    "tp2": 0.008442
+  },
+  {
+    "symbol": "EVAAUSDT",
+    "side": "SHORT",
+    "score": 81.8,
+    "sources": "KuCoin-Perp+CoinGecko",
+    "entry": 2.484,
+    "sl": 2.737361,
+    "tp1": 2.103959,
+    "tp2": 1.850598
   },
   {
     "symbol": "TFUELUSDT",
     "side": "LONG",
-    "score": 90.26,
-    "entry": 0.007153,
-    "sl": 0.006387,
-    "tp1": 0.008303,
-    "tp2": 0.00907
+    "score": 81.53,
+    "sources": "CoinGecko",
+    "entry": 0.0072,
+    "sl": 0.006433,
+    "tp1": 0.00835,
+    "tp2": 0.009117
   }
 ]
