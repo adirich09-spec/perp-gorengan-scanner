@@ -1,0 +1,20 @@
+[
+  {
+    "symbol": "XYZUSDT",
+    "side": "LONG",
+    "score": 28.4,
+    "entry": 1.0,
+    "sl": 0.97,
+    "tp1": 1.045,
+    "tp2": 1.075
+  },
+  {
+    "symbol": "ABCUSDT",
+    "side": "SHORT",
+    "score": 24.1,
+    "entry": 2.0,
+    "sl": 2.05,
+    "tp1": 1.925,
+    "tp2": 1.875
+  }
+]
