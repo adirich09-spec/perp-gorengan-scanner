@@ -2,71 +2,71 @@
   {
     "symbol": "SIUSDT",
     "side": "LONG",
-    "score": 26539.03,
+    "score": 8385.54,
     "sources": "CoinGecko",
     "entry": 0.028308,
-    "sl": 0.015699,
-    "tp1": 0.047222,
-    "tp2": 0.059832
+    "sl": 0.015892,
+    "tp1": 0.046932,
+    "tp2": 0.059348
   },
   {
     "symbol": "PORTALUSDT",
     "side": "LONG",
-    "score": 370.6,
+    "score": 439.81,
     "sources": "KuCoin-Perp+CoinGecko",
-    "entry": 0.03848,
-    "sl": 0.03062,
-    "tp1": 0.05027,
-    "tp2": 0.05813
+    "entry": 0.03351,
+    "sl": 0.022246,
+    "tp1": 0.050407,
+    "tp2": 0.061671
   },
   {
     "symbol": "EVAAUSDT",
     "side": "SHORT",
-    "score": 220.43,
-    "sources": "KuCoin-Perp+CoinGecko",
-    "entry": 1.3532,
-    "sl": 1.702346,
-    "tp1": 0.829481,
-    "tp2": 0.480335
-  },
-  {
-    "symbol": "AKEUSDT",
-    "side": "SHORT",
-    "score": 164.89,
-    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.00106,
-    "sl": 0.001251,
-    "tp1": 0.000774,
-    "tp2": 0.000584
+    "score": 244.07,
+    "sources": "KuCoin-Perp",
+    "entry": 1.2078,
+    "sl": 1.558231,
+    "tp1": 0.682153,
+    "tp2": 0.331722
   },
   {
     "symbol": "BLURUSDT",
     "side": "SHORT",
-    "score": 160.6,
+    "score": 181.68,
     "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.00674,
-    "sl": 0.007947,
-    "tp1": 0.004929,
-    "tp2": 0.003722
+    "entry": 0.00661,
+    "sl": 0.007948,
+    "tp1": 0.004603,
+    "tp2": 0.003265
   },
   {
     "symbol": "INITUSDT",
     "side": "SHORT",
-    "score": 154.38,
+    "score": 152.43,
     "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
-    "entry": 0.08897,
-    "sl": 0.103939,
-    "tp1": 0.066517,
-    "tp2": 0.051548
+    "entry": 0.08602,
+    "sl": 0.09983,
+    "tp1": 0.065306,
+    "tp2": 0.051496
   },
   {
-    "symbol": "THEUSDT",
+    "symbol": "AKEUSDT",
+    "side": "SHORT",
+    "score": 136.97,
+    "sources": "OKX-Perp+KuCoin-Perp+CoinGecko",
+    "entry": 0.001066,
+    "sl": 0.001218,
+    "tp1": 0.000838,
+    "tp2": 0.000686
+  },
+  {
+    "symbol": "ELFUSDT",
     "side": "LONG",
-    "score": 150.09,
-    "sources": "KuCoin-Perp+CoinGecko",
-    "entry": 0.03375,
-    "sl": 0.029496,
-    "tp1": 0.040131,
-    "tp2": 0.044384
+    "score": 118.97,
+    "sources": "CoinGecko",
+    "entry": 0.051672,
+    "sl": 0.045641,
+    "tp1": 0.060719,
+    "tp2": 0.06675
   }
 ]
